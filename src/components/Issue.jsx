@@ -16,13 +16,7 @@ function getRelativeTime(time) {   //whatever time we get, it will pass it into 
 }
 
 function getMetaFragment(issue) {
-    const { number, state, created_at, closed_at, user } = issue;
-
-    if (state === 'open') {
-        return <>#{ number} opened { getRelativeTime(created_at)} by { getUserLink(user)} </>; //on github, there are actually 2 types of tickets, when it's open and     //it will display the time it was opened using this function "getRelativeTime(created_at)"
-    } else {
-        return <>#{ number} was closed by { getUserLink(user)} {getRelativeTime(closed_at)} </> // when it's close.  //it will display the time closed at with this function "getRelativeTime(closed_at)"
-    };
+    const { number, state, created_at, closed_at, user } = issue
 };
 
 function Issue(props) {
