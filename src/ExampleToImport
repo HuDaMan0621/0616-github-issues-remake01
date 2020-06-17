@@ -1,0 +1,20 @@
+import React, { Component } from 'react'
+import issueData from '../data/issue';
+export default class IssueDetail extends Component {
+  //... constructor etc
+  componentDidMount() {
+    // const { issueNumber } = this.props.match.params;
+    // fetch(`https://api.github.com/repos/facebook/create-react-app/issues/${issueNumber}`)
+    //   .then(res => res.json())
+    //   .then(data => {
+    //     this.setState({
+    //       detail: data,
+    //       loading: false,
+    //     });
+    //   })
+    this.setState({
+      detail: issueData,
+      loading: false,
+    })
+  }
+  // ... rest of the component
