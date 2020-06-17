@@ -11,7 +11,7 @@ function pickTextColorBasedOnBackground(color) {  //it takes the color string , 
 
     //calculate luminance
     const unicolors = [r / 255, g / 255, b / 255];
-    const c = uicolors.map((col) => {
+    const c = unicolors.map((col) => {
         if (col <= 0.03928) {
             return col /12.92;
         }

@@ -5,6 +5,8 @@ import Label from './Label';
 
 import './Issue.css';
 
+
+//abstract code is beneficial when used more than once. ie, getUserLink used 3 times here.
 function getUserLink(user) {
     return <a href={user.url}>{user.login}</a>  //the userlink function returns a link with user.url and user.login.
 };
